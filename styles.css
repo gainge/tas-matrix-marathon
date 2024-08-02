@@ -1,0 +1,93 @@
+body {
+    background-color: ghostwhite;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+#header-container h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#header-stock {
+    width: 64px;
+    height: 64px;
+}
+
+#time-container {
+    margin-top: 1rem;
+}
+
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}
+
+.yellow-text {
+    color: yellow
+}
+
+img[class$="icon"] {
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+.submission-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+#run-display-container {
+    align-self: center;
+}
+
+#bounty-overview-container {
+    align-self: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#time-container > p {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    align-self: center;
+}
