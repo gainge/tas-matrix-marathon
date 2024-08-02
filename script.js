@@ -1,5 +1,17 @@
 console.log('show me what you got');
 
+const PLAYER_INDEX = 0;
+const CHARACTER_INDEX = 1;
+const LINK_INDEX = 2;
+const TIME_INDEX = 3;
+const DATE_INDEX = 4;
+const NEW_INDEX = 5;
+const FRAMES_INDEX = 6;
+const EOW_INDEX = 7;
+const CURRENT_BEST_INDEX = 8
+const BOUNTY_INDEX = 9
+const POINT_INDEX = 10;
+
 const CHARACTER_KEYS = Object.freeze({
     Dr_Mario: 'doc',
     Mario: 'mario',
@@ -103,9 +115,9 @@ function displayBountyInfo(parsed) {
     const playerBountyMap = {}
 
     parsed.forEach((row) => {
-        const player = row[0];
-        const bounty = parseInt(row[8].substring(1));
-        const points = parseInt(row[9]);
+        const player = row[PLAYER_INDEX];
+        const bounty = parseInt(row[BOUNTY_INDEX].substring(1));
+        const points = parseInt(row[POINT_INDEX]);
 
         let playerInfo = {
             'bounty': 0,
@@ -169,26 +181,26 @@ function addRow(row) {
 
     // Add the time
     const time = document.createElement('td');
-    time.innerText = row[3];
+    time.innerText = row[TIME_INDEX];
     tableRow.appendChild(time);
 
     // Player
     const player = document.createElement('td')
-    player.innerText = row[0];
+    player.innerText = row[PLAYER_INDEX];
     tableRow.appendChild(player);
 
     // Link
     const link = document.createElement('td');
     const linkContent = document.createElement('a');
-    linkContent.setAttribute('href', row[2])
+    linkContent.setAttribute('href', row[LINK_INDEX])
     linkContent.setAttribute('target', '_blank');
-    linkContent.innerText = row[2];
+    linkContent.innerText = row[LINK_INDEX];
     link.appendChild(linkContent);
     tableRow.appendChild(link);
 
     // Date
     const date = document.createElement('td');
-    date.innerText = row[4];
+    date.innerText = row[DATE_INDEX];
     tableRow.appendChild(date);
 
     table.appendChild(tableRow);
@@ -235,7 +247,6 @@ function udpateCountdownColor(remainingTime) {
 }
 
 function updateCountdown() {
-    console.log('updating timer');
     const element = getTimeSpan();
     const now = new Date().getTime();
     const remainingTime = 1722729600000 - now;

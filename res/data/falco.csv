@@ -1,19 +1,19 @@
-sockdude1	Roy	https://youtu.be/cjc1oMB9YMM	5.26	7/28	x			$1	0
-sockdude1	Marth	https://youtu.be/r7GbYLBGDTs	5.63	7/28	x			$1	0
-sockdude1	Link	https://youtu.be/GlBLld42LCI	3.41	7/28	x			$1	0
-Judge9	Luigi	https://youtu.be/ACoFyqZpsus	5.77	7/29	x			$1	0
-jenkem66	Sheik	https://youtu.be/M54Lm8BtQJ4	5.70	7/29	x			$1	0
-sockdude1	YL	https://youtu.be/AKeyNsHecCk	3.57	7/29	x			$1	0
-sockdude1	Pika	https://youtu.be/teHU1jAY34U	4.72	7/29	x			$1	0
-Gibrani	Pika	https://youtu.be/w3rSnhk2Ygo	4.43	7/29		17		$0	1
-jenkem66	Pika	https://youtu.be/JAiVsYoDJ7o	4.16	7/29		16		$0	1
-sockdude1	Doc	https://youtu.be/f5MV4ypfd7s	6.53	7/29	x			$1	0
-sockdude1	Doc	https://youtu.be/36oiXxOaTfU	6.11	7/29				$0	0
-sockdude1	Doc	https://youtu.be/bciJfEV9Bas	5.72	7/30				$0	0
-sockdude1	Doc	https://youtu.be/tFiJY3af6Go	5.46	7/30				$0	0
-sockdude1	Marth	https://youtu.be/Qu7ruRPq2Zs	5.31	7/30				$0	0
-Judge9	Popo	https://youtu.be/93vUy6wxxBE	6.72	7/31	x			$1	0
-sockdude1	Giga	https://youtu.be/wxhD26DvwSM	5.82	7/31	x			$1	0
-sockdude1	Bowser	https://youtu.be/7gcw1bxAccU	5.70	7/31	x			$1	0
-jenkem66	Peach	https://youtu.be/UAsp_ie8MfQ	5.70	8/1	x			$1	0
-jenkem66	Peach	https://youtu.be/-IF4BM7dV2g	5.16	8/1				$0	0
+sockdude1	Roy	https://youtu.be/cjc1oMB9YMM	5.26	7/28	x			TRUE	$1	0
+sockdude1	Marth	https://youtu.be/r7GbYLBGDTs	5.63	7/28	x			FALSE	$1	0
+sockdude1	Link	https://youtu.be/GlBLld42LCI	3.41	7/28	x			TRUE	$1	0
+Judge9	Luigi	https://youtu.be/ACoFyqZpsus	5.77	7/29	x			TRUE	$1	0
+jenkem66	Sheik	https://youtu.be/M54Lm8BtQJ4	5.70	7/29	x			TRUE	$1	0
+sockdude1	YL	https://youtu.be/AKeyNsHecCk	3.57	7/29	x			TRUE	$1	0
+sockdude1	Pika	https://youtu.be/teHU1jAY34U	4.72	7/29	x			FALSE	$1	0
+Gibrani	Pika	https://youtu.be/w3rSnhk2Ygo	4.43	7/29		17		FALSE	$0	1
+jenkem66	Pika	https://youtu.be/JAiVsYoDJ7o	4.16	7/29		16		TRUE	$0	1
+sockdude1	Doc	https://youtu.be/f5MV4ypfd7s	6.53	7/29	x			FALSE	$1	0
+sockdude1	Doc	https://youtu.be/36oiXxOaTfU	6.11	7/29				FALSE	$0	0
+sockdude1	Doc	https://youtu.be/bciJfEV9Bas	5.72	7/30				FALSE	$0	0
+sockdude1	Doc	https://youtu.be/tFiJY3af6Go	5.46	7/30				TRUE	$0	0
+sockdude1	Marth	https://youtu.be/Qu7ruRPq2Zs	5.31	7/30				TRUE	$0	0
+Judge9	Popo	https://youtu.be/93vUy6wxxBE	6.72	7/31	x			TRUE	$1	0
+sockdude1	Giga	https://youtu.be/wxhD26DvwSM	5.82	7/31	x			TRUE	$1	0
+sockdude1	Bowser	https://youtu.be/7gcw1bxAccU	5.70	7/31	x			TRUE	$1	0
+jenkem66	Peach	https://youtu.be/UAsp_ie8MfQ	5.70	8/1	x			FALSE	$1	0
+jenkem66	Peach	https://youtu.be/-IF4BM7dV2g	5.16	8/1				TRUE	$0	0
