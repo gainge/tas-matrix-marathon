@@ -238,11 +238,11 @@ function getBountyTable() {
 function udpateCountdownColor(remainingTime) {
     const span = getTimeSpan();
 
-    span.classList.remove('green-text', 'red-text', 'yellow-text');
+    span.classList.remove('green-text', 'red-text', 'orange-text');
     if (remainingTime < (1000 * 60 * 60 * 12)) {
         span.classList.add('red-text');
     } else if (remainingTime < (1000 * 60 * 60 * 30)) {
-        span.classList.add('.yellow-text');
+        span.classList.add('orange-text');
     } else {
         span.classList.add('green-text');
     }
