@@ -169,6 +169,8 @@ function addRow(row) {
     const table = getSubmissionTable();
 
     const tableRow = document.createElement('tr');
+    const isBest = row[CURRENT_BEST_INDEX] === 'TRUE';
+    tableRow.classList.add(isBest ? undefined : 'obsolete-record');
 
     // Add the character
     const character = document.createElement('td');
