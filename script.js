@@ -2,6 +2,8 @@ console.log('show me what you got');
 
 let intervalId;
 
+const THEME_WINDOW_END = 1722729600000 + (1000 * 60 * 60 * 24 * 7);
+
 const PLAYER_INDEX = 0;
 const CHARACTER_INDEX = 1;
 const LINK_INDEX = 2;
@@ -9,10 +11,11 @@ const TIME_INDEX = 3;
 const DATE_INDEX = 4;
 const NEW_INDEX = 5;
 const FRAMES_INDEX = 6;
-const EOW_INDEX = 7;
-const CURRENT_BEST_INDEX = 8
-const BOUNTY_INDEX = 9
-const POINT_INDEX = 10;
+const STAGE_INDEX = 7;
+const EOW_INDEX = 8;
+const CURRENT_BEST_INDEX = 9
+const BOUNTY_INDEX = 10
+const POINT_INDEX = 11;
 
 const CHARACTER_KEYS = Object.freeze({
     Dr_Mario: 'doc',
@@ -87,7 +90,7 @@ RUNS_DIR = 'data';
 IMG_DIR = 'img';
 STOCK_ICON_DIR = 'icons';
 
-CURRENT_CHAR = CHARACTER_KEYS.Falco;
+CURRENT_CHAR = CHARACTER_KEYS.Mario;
 STAGE_RUN_EXTENSION = '.csv'
 STOCK_ICON_EXTENSION = '.png'
     
@@ -178,9 +181,20 @@ function addRow(row) {
     const character = document.createElement('td');
     character.classList.add('image-container');
     const characterIcon = document.createElement('img');
-    characterIcon.setAttribute('src', getCharIconRef(row[1].toLowerCase()));
+    characterIcon.setAttribute('src', getCharIconRef(row[CHARACTER_INDEX].toLowerCase()));
     characterIcon.classList.add('stock-icon', 'submission-icon');
     character.appendChild(characterIcon);
+    if (row[STAGE_INDEX].toLowerCase() !== CURRENT_CHAR.toLowerCase()) {
+        const slash = document.createElement('span');
+        slash.innerText = ' / ';
+        character.appendChild(slash);
+
+        character.classList.add('multi-char-container');
+        const stageIcon = document.createElement('img');
+        stageIcon.setAttribute('src', getCharIconRef(row[STAGE_INDEX].toLowerCase()));
+        stageIcon.classList.add('stock-icon', 'submission-icon');
+        character.appendChild(stageIcon);
+    }
     tableRow.appendChild(character);
 
     // Add the time
@@ -253,7 +267,7 @@ function udpateCountdownColor(remainingTime) {
 function updateCountdown() {
     const element = getTimeSpan();
     const now = new Date().getTime();
-    const remainingTime = 1722729600000 - now;
+    const remainingTime = THEME_WINDOW_END - now;
 
     if (remainingTime <= 0) {
       clearInterval(intervalId);

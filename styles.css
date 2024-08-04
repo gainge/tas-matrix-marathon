@@ -7,6 +7,10 @@ body {
     flex-direction: column;
 }
 
+span {
+    white-space-collapse: preserve;
+}
+
 #header-container {
     display: flex;
     flex-direction: column;
@@ -59,6 +63,13 @@ img[class$="icon"] {
 
 .image-container {
     display: flex;
+    justify-content: center;
+}
+
+.multi-char-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 
