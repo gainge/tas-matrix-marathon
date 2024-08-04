@@ -1,5 +1,7 @@
 console.log('show me what you got');
 
+let intervalId;
+
 const PLAYER_INDEX = 0;
 const CHARACTER_INDEX = 1;
 const LINK_INDEX = 2;
@@ -271,7 +273,7 @@ function updateCountdown() {
 
 initDisplayForChar(CURRENT_CHAR);
 updateCountdown();
-setInterval(() => {updateCountdown()}, 1000);
+intervalId = setInterval(() => {updateCountdown()}, 1000);
 
 
 
