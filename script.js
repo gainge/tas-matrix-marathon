@@ -2,7 +2,8 @@ console.log('show me what you got');
 
 let intervalId;
 
-const THEME_WINDOW_END = 1722729600000 + (1000 * 60 * 60 * 24 * 7);
+const WEEK_NUMBER = 3;
+const THEME_WINDOW_END = 1722729600000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
 const CHARACTER_INDEX = 1;
@@ -90,7 +91,7 @@ RUNS_DIR = 'data';
 IMG_DIR = 'img';
 STOCK_ICON_DIR = 'icons';
 
-CURRENT_CHAR = CHARACTER_KEYS.Mario;
+CURRENT_CHAR = CHARACTER_KEYS.Zelda;
 STAGE_RUN_EXTENSION = '.csv'
 STOCK_ICON_EXTENSION = '.png'
     
