@@ -1,18 +1,21 @@
 sockdude1	ICs	https://youtu.be/qsjf3NojiTg	8.00	8/11			Mario	FALSE	TRUE	$0	0
-sockdude1	FWF	https://youtu.be/djow1aEfGU0	8.16	8/11	x		Zelda	FALSE	TRUE	$1	0
-sockdude1	Popo	https://youtu.be/SSNOOfPXmso	7.15	8/11	x		Zelda	FALSE	TRUE	$1	0
-sockdude1	Link	https://youtu.be/PYN32eC1MOM	3.97	8/12	x		Zelda	FALSE	TRUE	$1	0
-jenkem66	Marth	https://youtu.be/NWXRpGwdNdE	7.68	8/12	x		Zelda	FALSE	TRUE	$1	0
+sockdude1	FWF	https://youtu.be/djow1aEfGU0	8.16	8/11	x		Zelda	TRUE	TRUE	$2	0
+sockdude1	Popo	https://youtu.be/SSNOOfPXmso	7.15	8/11	x		Zelda	TRUE	TRUE	$2	0
+sockdude1	Link	https://youtu.be/PYN32eC1MOM	3.97	8/12	x		Zelda	TRUE	TRUE	$2	0
+jenkem66	Marth	https://youtu.be/NWXRpGwdNdE	7.68	8/12	x		Zelda	FALSE	FALSE	$1	0
 Judge9	Ganon	https://youtu.be/5p7MWr2PdUw	9.97	8/12	x		Zelda	FALSE	FALSE	$1	0
 Judge9	M2	https://youtu.be/umZwSvRxWBI	6.83	8/12	x		Zelda	FALSE	FALSE	$1	0
-jenkem66	Ganon	https://youtu.be/GDn24kZcons	9.72	8/13		15	Zelda	FALSE	TRUE	$0	1
-sockdude1	Giga	https://youtu.be/My3hdDlDfZQ	6.35	8/13	x		Zelda	FALSE	TRUE	$1	0
-Gibrani	Mario	https://youtu.be/8PvyEdZk220	5.35	8/13	x		Zelda	FALSE	TRUE	$1	0
-Gibrani	M2	https://youtu.be/Hvb9FYQB0IU	6.50	8/14		20	Zelda	FALSE	TRUE	$0	1
+jenkem66	Ganon	https://youtu.be/GDn24kZcons	9.72	8/13		15	Zelda	TRUE	TRUE	$1	1
+sockdude1	Giga	https://youtu.be/My3hdDlDfZQ	6.35	8/13	x		Zelda	TRUE	TRUE	$2	0
+Gibrani	Mario	https://youtu.be/8PvyEdZk220	5.35	8/13	x		Zelda	TRUE	TRUE	$2	0
+Gibrani	M2	https://youtu.be/Hvb9FYQB0IU	6.50	8/14		20	Zelda	TRUE	TRUE	$1	1
 Gibrani	Falco	https://youtu.be/zuxlGO8LlTw	5.77	8/14		31	Zelda	FALSE	FALSE	$0	1
-sockdude1	Roy	https://youtu.be/3A2ckUeOQyI	8.26	8/14	x		Zelda	FALSE	TRUE	$1	0
-Gibrani	Falco	https://youtu.be/bLd_eCQe2QU	5.68	8/14			Zelda	FALSE	TRUE	$0	0
+sockdude1	Roy	https://youtu.be/3A2ckUeOQyI	8.26	8/14	x		Zelda	TRUE	TRUE	$2	0
+Gibrani	Falco	https://youtu.be/bLd_eCQe2QU	5.68	8/14			Zelda	TRUE	TRUE	$1	0
 Gibrani	Pika	https://youtu.be/BdiaYNQTc3M	5.00	8/14	x		Zelda	FALSE	FALSE	$1	0
-Judge9	Puff	https://youtu.be/Kb8nzuzy5HU	8.57	8/15	x		Zelda	FALSE	TRUE	$1	0
-Judge9	Kirby	https://youtu.be/u9e47EYoYOk	9.25	8/15	x		Zelda	FALSE	TRUE	$1	0
-Gibrani	Pika	https://youtu.be/46JvlIbYJzs	4.88	8/16			Zelda	FALSE	TRUE	$0	0
+Judge9	Puff	https://youtu.be/Kb8nzuzy5HU	8.57	8/15	x		Zelda	TRUE	TRUE	$2	0
+Judge9	Kirby	https://youtu.be/u9e47EYoYOk	9.25	8/15	x		Zelda	FALSE	FALSE	$1	0
+Gibrani	Pika	https://youtu.be/46JvlIbYJzs	4.88	8/16			Zelda	TRUE	TRUE	$1	0
+Gibrani	Kirby	https://youtu.be/uHvvSIuh0SU	9.01	8/16		14	Zelda	TRUE	TRUE	$1	1
+Judge9	Ness	https://youtu.be/QkLCJJ56M6Q	6.62	8/17	x		Zelda	TRUE	TRUE	$2	0
+Gibrani	Marth	https://youtu.be/z73ulneHb3o	7.48	8/17		12	Zelda	TRUE	TRUE	$1	1
