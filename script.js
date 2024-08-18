@@ -2,8 +2,8 @@ console.log('show me what you got');
 
 let intervalId;
 
-const WEEK_NUMBER = 3;
-const THEME_WINDOW_END = 1722729600000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
+const WEEK_NUMBER = 4;
+const THEME_WINDOW_END = 1722751199000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
 const CHARACTER_INDEX = 1;
@@ -91,16 +91,26 @@ RUNS_DIR = 'data';
 IMG_DIR = 'img';
 STOCK_ICON_DIR = 'icons';
 
-CURRENT_CHAR = CHARACTER_KEYS.Zelda;
+CURRENT_CHAR = CHARACTER_KEYS.Marth;
 STAGE_RUN_EXTENSION = '.csv'
 STOCK_ICON_EXTENSION = '.png'
     
+function getCharDataDirectory(char) {
+    return `${RES_DIR}/${RUNS_DIR}/${char}${STAGE_RUN_EXTENSION}`
+}
 
+function getCharIconRef(char) {
+    return `${RES_DIR}/${IMG_DIR}/${STOCK_ICON_DIR}/${char}${STOCK_ICON_EXTENSION}`;
+}
 
-fetch(`${RES_DIR}/${RUNS_DIR}/${CURRENT_CHAR}${STAGE_RUN_EXTENSION}`)
+fetch(getCharDataDirectory(CURRENT_CHAR))
     .then(response => response.text())
     .then(data => displayStageData(data))
 
+
+function getTargetChar() {
+    return window.location.hash.slice(1);
+}
 
 function displayStageData(data) {
     const rows = data.split('\n');
@@ -111,8 +121,6 @@ function displayStageData(data) {
     }
 
     displayBountyInfo(parsed)
-
-    // Display the bounty stuff
 }
 
 function displayBountyInfo(parsed) {
@@ -223,11 +231,6 @@ function addRow(row) {
     tableRow.appendChild(date);
 
     table.appendChild(tableRow);
-}
-
-
-function getCharIconRef(char) {
-    return `${RES_DIR}/${IMG_DIR}/${STOCK_ICON_DIR}/${char}${STOCK_ICON_EXTENSION}`;
 }
 
 function getCurrentCharIcon() {
