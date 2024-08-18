@@ -86,14 +86,15 @@ const characterStrings = {
     [CHARACTER_KEYS.Zelda]: 'Zelda'
 };
 
-RES_DIR = './res';
-RUNS_DIR = 'data';
-IMG_DIR = 'img';
-STOCK_ICON_DIR = 'icons';
+const RES_DIR = './res';
+const RUNS_DIR = 'data';
+const IMG_DIR = 'img';
+const STOCK_ICON_DIR = 'icons';
 
-CURRENT_CHAR = CHARACTER_KEYS.Marth;
-STAGE_RUN_EXTENSION = '.csv'
-STOCK_ICON_EXTENSION = '.png'
+const CURRENT_CHAR = CHARACTER_KEYS.Marth;
+const PREV_CHAR = CHARACTER_KEYS.Zelda;
+const STAGE_RUN_EXTENSION = '.csv'
+const STOCK_ICON_EXTENSION = '.png'
     
 function getCharDataDirectory(char) {
     return `${RES_DIR}/${RUNS_DIR}/${char}${STAGE_RUN_EXTENSION}`
@@ -102,6 +103,9 @@ function getCharDataDirectory(char) {
 function getCharIconRef(char) {
     return `${RES_DIR}/${IMG_DIR}/${STOCK_ICON_DIR}/${char}${STOCK_ICON_EXTENSION}`;
 }
+
+// Dynamically populate tas of the week vote
+document.getElementById('prev-stage-vote-span').innerText = characterStrings[PREV_CHAR];
 
 fetch(getCharDataDirectory(CURRENT_CHAR))
     .then(response => response.text())
@@ -120,7 +124,7 @@ function displayStageData(data) {
         addRow(parsed[i]);
     }
 
-    displayBountyInfo(parsed)
+    displayBountyInfo(parsed);
 }
 
 function displayBountyInfo(parsed) {

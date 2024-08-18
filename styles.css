@@ -107,4 +107,7 @@ footer {
     padding-top: 2rem;
     padding-bottom: 1rem;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
