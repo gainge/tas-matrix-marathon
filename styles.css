@@ -103,6 +103,10 @@ td, th {
     background-color: #dfdfdf;
 }
 
+.vanilla-wr * {
+    background-color: goldenrod;
+}
+
 footer {
     padding-top: 2rem;
     padding-bottom: 1rem;
