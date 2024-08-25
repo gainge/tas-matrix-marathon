@@ -273,7 +273,7 @@ function addRow(row) {
     const tableRow = document.createElement('tr');
     const isBest = row[CURRENT_BEST_INDEX] === 'TRUE';
     tableRow.classList.add(isBest ? undefined : 'obsolete-record');
-    const vanilla = row[CHARACTER_INDEX].toLowerCase() === CURRENT_CHAR
+    const vanilla = row[CHARACTER_INDEX].toLowerCase() === row[STAGE_INDEX].toLowerCase()
     tableRow.classList.add(vanilla ? 'vanilla-wr' : undefined);
 
     // Add the character
