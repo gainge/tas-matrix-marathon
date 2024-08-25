@@ -8,6 +8,8 @@
     <link rel="icon" href="./res/img/favicon.png">
 </head>
 <body>
+    <select name="stage-chooser" id="stage-chooser" onchange="charSelected(this)"></select>
+    <button id="totals-button" onClick="viewTotals()">View Totals</button>
     <div id="header-container">
         <h1>Current Theme Stage:</h1>
         <h1 id="theme-stage-label"></h1>
@@ -16,6 +18,8 @@
             <h3>Time Remaining: <span id="time-span"></span></h3>
         </div>
     </div>
+
+    <h3 id="override-display" class="hidden">Currently Viewing: <span id="selection-span"></span> Stage</h3>
 
     <div id="bounty-overview-container">
         <p>Bounty Standings</p>

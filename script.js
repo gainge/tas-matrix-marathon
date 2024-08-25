@@ -18,6 +18,8 @@ const CURRENT_BEST_INDEX = 9
 const BOUNTY_INDEX = 10
 const POINT_INDEX = 11;
 
+const CHAR_QUERY_PARAM = 'char';
+
 const CHARACTER_KEYS = Object.freeze({
     Dr_Mario: 'doc',
     Mario: 'mario',
@@ -95,6 +97,16 @@ const CURRENT_CHAR = CHARACTER_KEYS.Marth;
 const PREV_CHAR = CHARACTER_KEYS.Zelda;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
+
+const PAST_CHARACTERS = [
+    CHARACTER_KEYS.Falco,
+    CHARACTER_KEYS.Mario,
+    CHARACTER_KEYS.Zelda,
+]
+
+function viewTotals() {
+    alert('totals woo');
+}
     
 function getCharDataDirectory(char) {
     return `${RES_DIR}/${RUNS_DIR}/${char}${STAGE_RUN_EXTENSION}`
@@ -104,19 +116,84 @@ function getCharIconRef(char) {
     return `${RES_DIR}/${IMG_DIR}/${STOCK_ICON_DIR}/${char}${STOCK_ICON_EXTENSION}`;
 }
 
+const ALL_CHAR_DATA = {};
+
 // Dynamically populate tas of the week vote
 document.getElementById('prev-stage-vote-span').innerText = characterStrings[PREV_CHAR];
 
-fetch(getCharDataDirectory(CURRENT_CHAR))
-    .then(response => response.text())
-    .then(data => displayStageData(data))
+const selectedChar = getURLCharSelection();
 
+fetch(getCharDataDirectory(selectedChar))
+    .then(response => response.text())
+    .then(data => handleData(data, selectedChar))
+
+function handleData(data, char) {
+    maybeUpdateHeaderForSelection(char)
+    displayStageData(data)
+}
+
+Promise.all([CURRENT_CHAR, ...PAST_CHARACTERS].map((char) => loadCharData(char)));
+
+async function loadCharData(char) {
+    const response = await fetch(getCharDataDirectory(char));
+    const data = await response.text();
+    ALL_CHAR_DATA[char] = data;
+    // Populate our dropdown with this option
+    const dropdown = getStageChooser(char);
+    const option = document.createElement('option');
+    option.innerText = characterStrings[char];
+    option.setAttribute('Value', char);
+    dropdown.appendChild(option);
+
+    if (char === selectedChar) {
+        dropdown.value = char;
+    }
+}
+
+function getStageChooser() {
+    return document.getElementById('stage-chooser');
+}
+
+function getURLCharSelection() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(CHAR_QUERY_PARAM) ?? CURRENT_CHAR;
+}
+
+function charSelected(selectedObject) {
+    const char = selectedObject.value;
+
+    maybeUpdateHeaderForSelection(char);
+
+    displayStageData(ALL_CHAR_DATA[char]);
+}
+
+function maybeUpdateHeaderForSelection(char) {
+    // Update display if it's not the current char
+    if (char !== CURRENT_CHAR) {
+        document.getElementById('header-container').classList.add('hidden');
+        document.getElementById('override-display').classList.remove('hidden');
+        document.getElementById('selection-span').innerText = characterStrings[char];
+    } else {
+        document.getElementById('header-container').classList.remove('hidden');
+        document.getElementById('override-display').classList.add('hidden');
+    }
+}
 
 function getTargetChar() {
     return window.location.hash.slice(1);
 }
 
+function clearDisplay() {
+    const runs = getSubmissionTable();
+    runs.innerHTML = '';
+
+    const bounty = getBountyTable();
+    bounty.innerHTML = '';
+}
+
 function displayStageData(data) {
+    clearDisplay();
+
     const rows = data.split('\n');
     const parsed = rows.map(row => row.split('\t'));
 
