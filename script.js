@@ -105,7 +105,13 @@ const PAST_CHARACTERS = [
 ]
 
 function viewTotals() {
-    alert('totals woo');
+    document.getElementById('totals-background').classList.remove('hidden');
+    document.getElementById('totals-container').classList.remove('hidden');
+}
+
+function hideTotals() {
+    document.getElementById('totals-background').classList.add('hidden');
+    document.getElementById('totals-container').classList.add('hidden');
 }
     
 function getCharDataDirectory(char) {
