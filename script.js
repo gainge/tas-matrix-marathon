@@ -102,6 +102,7 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Falco,
     CHARACTER_KEYS.Mario,
     CHARACTER_KEYS.Zelda,
+    CHARACTER_KEYS.Marth,
 ]
 
 function viewTotals() {
