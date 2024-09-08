@@ -2,7 +2,7 @@ console.log('show me what you got');
 
 let intervalId;
 
-const WEEK_NUMBER = 6;
+const WEEK_NUMBER = 7;
 const THEME_WINDOW_END = 1722751199000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
@@ -93,8 +93,8 @@ const RUNS_DIR = 'data';
 const IMG_DIR = 'img';
 const STOCK_ICON_DIR = 'icons';
 
-const CURRENT_CHAR = CHARACTER_KEYS.Ganon;
-const PREV_CHAR = CHARACTER_KEYS.Peach;
+const CURRENT_CHAR = CHARACTER_KEYS.Yoshi;
+const PREV_CHAR = CHARACTER_KEYS.Ganon;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
 
@@ -104,6 +104,7 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Zelda,
     CHARACTER_KEYS.Marth,
     CHARACTER_KEYS.Peach,
+    CHARACTER_KEYS.Ganon
 ]
 
 function viewTotals() {
@@ -131,6 +132,7 @@ document.getElementById('prev-stage-vote-span').innerText = characterStrings[PRE
 
 const selectedChar = getURLCharSelection();
 
+populateCharChooser();
 fetch(getCharDataDirectory(selectedChar))
     .then(response => response.text())
     .then(data => handleData(data, selectedChar))
@@ -142,19 +144,30 @@ function handleData(data, char) {
 
 Promise.all([CURRENT_CHAR, ...PAST_CHARACTERS].map((char) => loadCharData(char)));
 
-async function loadCharData(char) {
+async function populateCharData(char) {
     const response = await fetch(getCharDataDirectory(char));
     const data = await response.text();
     ALL_CHAR_DATA[char] = data;
-    // Populate our dropdown with this option
-    const dropdown = getStageChooser(char);
-    const option = document.createElement('option');
-    option.innerText = characterStrings[char];
-    option.setAttribute('Value', char);
-    dropdown.appendChild(option);
+}
 
-    if (char === selectedChar) {
-        dropdown.value = char;
+function populateCharChooser() {
+    [CURRENT_CHAR, ...PAST_CHARACTERS].forEach((char) => {
+        // Populate our dropdown with this option
+        const dropdown = getStageChooser(char);
+        const option = document.createElement('option');
+        option.innerText = characterStrings[char];
+        option.setAttribute('Value', char);
+        dropdown.appendChild(option);
+
+        if (char === selectedChar) {
+            dropdown.value = char;
+        }
+    })
+}
+
+async function loadCharData(char) {
+    if (!ALL_CHAR_DATA[char]) {
+        await populateCharData(char);
     }
 }
 
@@ -167,8 +180,10 @@ function getURLCharSelection() {
     return urlParams.get(CHAR_QUERY_PARAM) ?? CURRENT_CHAR;
 }
 
-function charSelected(selectedObject) {
+async function charSelected(selectedObject) {
     const char = selectedObject.value;
+
+    loadCharData(char);
 
     maybeUpdateHeaderForSelection(char);
 
