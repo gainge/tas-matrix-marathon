@@ -1,7 +1,10 @@
 sockdude1	ICs	https://youtu.be/Zm_b5yz5BYU	8.73	9/1			Peach	FALSE	TRUE	$0	0
-Judge9	Luigi	https://youtu.be/Yw4JL4qLUlc	3.72	9/4	x		Ganon	FALSE	TRUE	$1	0
-Judge9	Bowser	https://youtu.be/xhkX2tkey6A	4.53	9/5	x		Ganon	FALSE	TRUE	$1	0
-sockdude1	ICs	https://youtu.be/pnYSlKN_zuI	3.48	9/5	x		Ganon	FALSE	TRUE	$1	0
-Judge9	Puff	https://youtu.be/Z9OiiPsWUMw	4.13	9/5	x		Ganon	FALSE	TRUE	$1	0
+Judge9	Luigi	https://youtu.be/Yw4JL4qLUlc	3.72	9/4	x		Ganon	TRUE	TRUE	$2	0
+Judge9	Bowser	https://youtu.be/xhkX2tkey6A	4.53	9/5	x		Ganon	TRUE	TRUE	$2	0
+sockdude1	ICs	https://youtu.be/pnYSlKN_zuI	3.48	9/5	x		Ganon	TRUE	TRUE	$2	0
+Judge9	Puff	https://youtu.be/Z9OiiPsWUMw	4.13	9/5	x		Ganon	TRUE	TRUE	$2	0
 Gibrani	Gnw	https://youtu.be/mTVDxnvucyU	7.55	9/5		5	Peach	FALSE	TRUE	$0	1
-Judge9	Marth	https://youtu.be/sP3fB4dIpwk	3.58	9/6	x		Ganon	FALSE	TRUE	$1	0
+Judge9	Marth	https://youtu.be/sP3fB4dIpwk	3.58	9/6	x		Ganon	TRUE	TRUE	$2	0
+Judge9	Kirby	https://youtu.be/PP4hTvm67_k	3.90	9/6	x		Ganon	TRUE	TRUE	$2	0
+sockdude1	MWF	https://youtu.be/EoCh2MMvto8	3.72	9/7	x		Ganon	TRUE	TRUE	$2	0
+Judge9	Ness	https://youtu.be/sNX-EdagWYw	3.73	9/7	x		Ganon	TRUE	TRUE	$2	0
