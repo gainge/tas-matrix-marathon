@@ -2,7 +2,7 @@ console.log('show me what you got');
 
 let intervalId;
 
-const WEEK_NUMBER = 7;
+const WEEK_NUMBER = 8;
 const THEME_WINDOW_END = 1722751199000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
@@ -93,8 +93,8 @@ const RUNS_DIR = 'data';
 const IMG_DIR = 'img';
 const STOCK_ICON_DIR = 'icons';
 
-const CURRENT_CHAR = CHARACTER_KEYS.Yoshi;
-const PREV_CHAR = CHARACTER_KEYS.Ganon;
+const CURRENT_CHAR = CHARACTER_KEYS.Roy;
+const PREV_CHAR = CHARACTER_KEYS.Yoshi;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
 
@@ -104,7 +104,8 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Zelda,
     CHARACTER_KEYS.Marth,
     CHARACTER_KEYS.Peach,
-    CHARACTER_KEYS.Ganon
+    CHARACTER_KEYS.Ganon,
+    CHARACTER_KEYS.Yoshi,
 ]
 
 function viewTotals() {
