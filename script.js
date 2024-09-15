@@ -152,7 +152,7 @@ async function populateCharData(char) {
 }
 
 function populateCharChooser() {
-    [CURRENT_CHAR, ...PAST_CHARACTERS].forEach((char) => {
+    [CURRENT_CHAR, ...PAST_CHARACTERS.reverse()].forEach((char) => {
         // Populate our dropdown with this option
         const dropdown = getStageChooser(char);
         const option = document.createElement('option');
