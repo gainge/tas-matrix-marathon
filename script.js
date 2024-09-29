@@ -2,7 +2,7 @@ console.log('show me what you got');
 
 let intervalId;
 
-const WEEK_NUMBER = 9;
+const WEEK_NUMBER = 10;
 const THEME_WINDOW_END = 1722751199000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
@@ -93,8 +93,8 @@ const RUNS_DIR = 'data';
 const IMG_DIR = 'img';
 const STOCK_ICON_DIR = 'icons';
 
-const CURRENT_CHAR = CHARACTER_KEYS.Dr_Mario;
-const PREV_CHAR = CHARACTER_KEYS.Roy;
+const CURRENT_CHAR = CHARACTER_KEYS.Link;
+const PREV_CHAR = CHARACTER_KEYS.Dr_Mario;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
 
@@ -107,6 +107,7 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Ganon,
     CHARACTER_KEYS.Yoshi,
     CHARACTER_KEYS.Roy,
+    CHARACTER_KEYS.Dr_Mario,
 ]
 
 function viewTotals() {
