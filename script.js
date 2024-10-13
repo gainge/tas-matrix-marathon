@@ -93,8 +93,8 @@ const RUNS_DIR = 'data';
 const IMG_DIR = 'img';
 const STOCK_ICON_DIR = 'icons';
 
-const CURRENT_CHAR = CHARACTER_KEYS.Luigi;
-const PREV_CHAR = CHARACTER_KEYS.Link;
+const CURRENT_CHAR = CHARACTER_KEYS.Ness;
+const PREV_CHAR = CHARACTER_KEYS.Luigi;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
 
@@ -109,6 +109,7 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Roy,
     CHARACTER_KEYS.Dr_Mario,
     CHARACTER_KEYS.Link,
+    CHARACTER_KEYS.Luigi,
 ]
 
 function viewTotals() {
