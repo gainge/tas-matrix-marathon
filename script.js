@@ -2,7 +2,7 @@ console.log('show me what you got');
 
 let intervalId;
 
-const WEEK_NUMBER = 17;
+const WEEK_NUMBER = 18;
 const THEME_WINDOW_END = 1722751199000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
@@ -93,8 +93,8 @@ const RUNS_DIR = 'data';
 const IMG_DIR = 'img';
 const STOCK_ICON_DIR = 'icons';
 
-const CURRENT_CHAR = CHARACTER_KEYS.Pichu;
-const PREV_CHAR = CHARACTER_KEYS.Samus;
+const CURRENT_CHAR = CHARACTER_KEYS.Falcon;
+const PREV_CHAR = CHARACTER_KEYS.Pichu;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
 
@@ -115,6 +115,7 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Bowser,
     CHARACTER_KEYS.Fox,
     CHARACTER_KEYS.Samus,
+    CHARACTER_KEYS.Pichu,
 ]
 
 function viewTotals() {
