@@ -2,7 +2,7 @@ console.log('show me what you got');
 
 let intervalId;
 
-const WEEK_NUMBER = 21;
+const WEEK_NUMBER = 22;
 const THEME_WINDOW_END = 1722751199000 + (WEEK_NUMBER - 1) * (1000 * 60 * 60 * 24 * 7);
 
 const PLAYER_INDEX = 0;
@@ -52,6 +52,7 @@ const CHARACTER_KEYS = Object.freeze({
     FWF: 'fwf',
     ICs: 'ics',
     Zelda: 'zelda',
+    Crazy: 'crazy',
 });
 
 const characterStrings = {
@@ -85,7 +86,8 @@ const characterStrings = {
     [CHARACTER_KEYS.MWF]: 'Male Wire Frame',
     [CHARACTER_KEYS.FWF]: 'Female Wire Frame',
     [CHARACTER_KEYS.ICs]: 'Ice Climbers',
-    [CHARACTER_KEYS.Zelda]: 'Zelda'
+    [CHARACTER_KEYS.Zelda]: 'Zelda',
+    [CHARACTER_KEYS.Crazy]: '???',
 };
 
 const RES_DIR = './res';
@@ -93,8 +95,8 @@ const RUNS_DIR = 'data';
 const IMG_DIR = 'img';
 const STOCK_ICON_DIR = 'icons';
 
-const CURRENT_CHAR = CHARACTER_KEYS.ICs;
-const PREV_CHAR = CHARACTER_KEYS.Pikachu;
+const CURRENT_CHAR = CHARACTER_KEYS.Crazy;
+const PREV_CHAR = CHARACTER_KEYS.ICs;
 const STAGE_RUN_EXTENSION = '.csv'
 const STOCK_ICON_EXTENSION = '.png'
 
@@ -119,6 +121,7 @@ const PAST_CHARACTERS = [
     CHARACTER_KEYS.Falcon,
     CHARACTER_KEYS.M2,
     CHARACTER_KEYS.Pikachu,
+    CHARACTER_KEYS.ICs,
 ]
 
 function viewTotals() {
